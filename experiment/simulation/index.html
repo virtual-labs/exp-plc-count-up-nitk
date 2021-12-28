@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+<meta charset="UTF-8">
+<title>SOLVE</title>
+<link rel="stylesheet" href="css/cui.css" />
+<script type="text/javascript" src="js/cui.js"></script>
+<script>
+var simsubscreennum=0;
+var temp=0;
+</script>
 </head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<body style="margin:0; font-family:verdana; color:#ffffff;">
+<div id="simscreen">
+<div id="title"><h3>PLC COUNT-UP INSTRUCTION</h3></div>
+
+<div class="simsubscreen">
+	<img style="position:absolute; left:10px; top:90px;" src="images/i1.png" />
+	<img style="position:absolute; left:350px; top:40px;" src="images/counter.png" />
+	<img style="position:absolute; left:10px; top:300px;" src="images/control.png" />
+	
+	<img id="off1" style="position:absolute; left:704.5px; top:122.5px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on1" style="position:absolute; left:704.5px; top:122.5px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off2" style="position:absolute; left:705.5px; top:167.5px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on2" style="position:absolute; left:705.5px; top:167.5px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off3" style="position:absolute; left:709.5px; top:235.5px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on3" style="position:absolute; left:709.5px; top:235.5px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off4" style="position:absolute; left:709.5px; top:308.5px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on4" style="position:absolute; left:709.5px; top:308.5px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	<img id="off5" style="position:absolute; left:709.5px; top:379.5px; width:22.5px; height:22.5px;" src="images/off.png" />
+	<img id="on5" style="position:absolute; left:709.5px; top:379.5px; width:22.5px; height:22.5px; visibility:hidden;" src="images/on.png" />
+	
+	<div id="bit1" style="position:absolute; left:409px; top:100px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">I:1/0</div>
+	<div id="bit2" style="position:absolute; left:399px; top:210px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">C5:O/CU</div>
+	<div id="bit3" style="position:absolute; left:399px; top:282px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">C5:O/DN</div>
+	<div id="bit4" style="position:absolute; left:408px; top:354px; padding:2px; background-color:red; color:black; font-size:11px; font-weight:bold;">I:1/1</div>
+	
+	<p style="position:absolute; left:706.5px; top:116px; font-size:11px; font-weight:bold;">CU</p>
+	<p style="position:absolute; left:707.5px; top:160px; font-size:11px; font-weight:bold;">DN</p>
+	<p style="position:absolute; left:709px; top:372.5px; font-size:11px; font-weight:bold;">RES</p>
+	
+	<div id="cu" style="position:absolute; left:274.5px; top:327.25px; background-color:#996600; width:20px; height:20px; border-radius:11px; border:2px solid #996600;"></div>
+	<div id="dc" style="position:absolute; left:274.5px; top:380px; background-color:#996600; width:20px; height:20px; border-radius:11px; border:2px solid #996600;"></div>
+
+	<button id="count" style="position:absolute; left:88px; top:318.25px; background-image: linear-gradient(to right, #FFEB99, #FED430, #E1B400, #C79F00, #a98700); width:22px; height:20px; border-radius:11px; cursor:pointer; border-color:darkgrey;" onmousedown="startCounter();" onmouseup="stopCounter();"></button>
+	
+	<button id="reset" style="position:absolute; left:87px; top:374.75px; background-image: linear-gradient(to right, #F0A7A7, #E35A5A, #D11313, #B00000, #980000); width:23px; height:20.5px; border-radius:11.5px; cursor:pointer; border-color:darkgrey;" onmousedown="reset();" onmouseup="offReset();"></button>
+	
+	<p style="position:absolute; left:644.5px; top:144.5px; font-size:14px;">5</p>
+	<p id="accum" style="position:absolute; left:644.5px; top:165.5px;font-size:14px;">0</p>
+</div>
+
+<div id="copyright"> &copy; 2020 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal</div>
+
+</div>
 </body>
 </html>
