@@ -1,0 +1,150 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "A typical counter counts from 0 upto a predetermined value, called the _________ .",
+      "answers": {
+        "a": "Accumulated value",
+        "b": "Preset value"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "The default counter file is ___________.",
+      "answers": {
+        "a": "File 2",
+        "b": "File 3",
+        "c": "File 4",
+        "d": "File 5"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "Any data file, which is greater than _________ can be assigned as an additional counter.",
+      "answers": {
+        "a": "File 6",
+        "b": "File 7",
+        "c": "File 8",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "In counter element, the word one is for _______",
+      "answers": {
+        "a": "Preset value",
+        "b": "Accumulated value",
+        "c": "Status bit",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "In default counter file, how to address the counter’s 12 preset value?",
+      "answers": {
+        "a": "C5:12.PRE",
+        "b": "C5:12/PRE",
+        "c": "C5:12-PRE",
+        "d": "All of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "In word zero of the counter element, bit 10 represents",
+      "answers": {
+        "a": "UN bit",
+        "b": "UA bit",
+        "c": "OV bit",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "In word zero of the counter element, bit 12 represents",
+      "answers": {
+        "a": "DN bit",
+        "b": "CD bit",
+        "c": "OV bit",
+        "d": "CU bit"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "High-speed counter is only enabled by the rung on which it resides. The high speed counter instruction does not count rung transitions. These transitions are counted from the input screw terminal to which it is programmed.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "Each counter file can have up to _______ counter element .",
+      "answers": {
+        "a": "512",
+        "b": "128",
+        "c": "756",
+        "d": "256"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    }
+  ]
+}
