@@ -2,9 +2,9 @@
 
 ### PLC Counters :
 
-<p style="text-align: justify;">A counter is a simple device intended to do one simple thing-count. Every PLC has counter instructions. Using counters sometimes be little challenging because many manufacturers seem to use them different way. In other words, the instruction symbol used and method of programming will change for different manufacturers. <br>
+<p style="text-align: justify;">A counter is a simple device intended to do one simple thing-count. Every PLC has counter instructions. Using counters sometimes be little challenging because many manufacturers seem to use them different way. In other words, the instruction symbol used and method of programming will change for different manufacturers. </p>
 
-A typical counter counts from 0 up to a predetermined value, called the “preset” value. For example, if you wanted to count from certain value, say from 0 to 50, you would be counting up using a count-up or up-counter. Here, the number “50”, is the predetermined value, which is nothing but preset value. The current count or accumulated count is called as the “accumulated value”. If our counter had counted 25 pieces that had passed on the conveyor, the accumulated count would be 25. When all 50 pieces had passed on the conveyor, the preset value and counter accumulated value would be equal. At this point the counter would signal other logic within the PLC program that the batch of 50 was completed and it should now take some action. The next action the PLC has to take is to move the box containing 50 parts on to the next station for carton sealing. To start counting the next batch, a reset instruction would be used to reset the counter’s accumulated value back to zero.<br>
+<p style="text-align: justify;">A typical counter counts from 0 up to a predetermined value, called the “preset” value. For example, if you wanted to count from certain value, say from 0 to 50, you would be counting up using a count-up or up-counter. Here, the number “50”, is the predetermined value, which is nothing but preset value. The current count or accumulated count is called as the “accumulated value”. If our counter had counted 25 pieces that had passed on the conveyor, the accumulated count would be 25. When all 50 pieces had passed on the conveyor, the preset value and counter accumulated value would be equal. At this point the counter would signal other logic within the PLC program that the batch of 50 was completed and it should now take some action. The next action the PLC has to take is to move the box containing 50 parts on to the next station for carton sealing. To start counting the next batch, a reset instruction would be used to reset the counter’s accumulated value back to zero.<br>
 The fig below shows an up-counter, counting from 0 to 50. </p>
 
 <center>
@@ -20,9 +20,9 @@ The fig below shows a down-counter, counting from 50 to 0.
 <img src="images/counter/3.gif" style="width:463px; height:452px;"></center>
 
 #### As for explanation, let us take ALLEN-BRADELY counters :
-<p style="text-align: justify;">In Allen-bradely counter, the default counter file is file 5. The counter data is stored in counter file. Each counter consists of three 16-bit words and is known as “counter element”. In a single processor file, there can be many counter files. Any data file, which is greater than file 8 can be assigned as an additional counter file. Each counter file can have up to 256 counter elements.<br>
+<p style="text-align: justify;">In Allen-bradely counter, the default counter file is file 5. The counter data is stored in counter file. Each counter consists of three 16-bit words and is known as “counter element”. In a single processor file, there can be many counter files. Any data file, which is greater than file 8 can be assigned as an additional counter file. Each counter file can have up to 256 counter elements.</p>
 
-A counter instruction is one element. A counter element is made up of three 16-bit words. Thus, the counter instruction contains the three parts i.e. word0, word1 and word2. </p>
+<p style="text-align: justify;">A counter instruction is one element. A counter element is made up of three 16-bit words. Thus, the counter instruction contains the three parts i.e. word0, word1 and word2. </p>
 
 <ul type=disc style="text-align: justify;">
 <li>Word zero is for status bits. Status bits include CU, CD, DN, OV, UN, and UA. Along with their associated instructions.</li>
@@ -34,7 +34,7 @@ A counter instruction is one element. A counter element is made up of three 16-b
 <img src="images/counter/4.gif" style="width:501px; height:129px;"></center>
 
 #### Addressing a counter :
-<ol type="1">
+<ol type="1" style="text-align: justify;">
 <li><p style="text-align: justify;">To address the counter as a unit the addressing format used is C5:4.<br>
 Where, C= C identifies this as a counter file.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5= This is counter file 4 which is default. Any unused file from 10 to 255can be assigned to counters.<br>
@@ -47,7 +47,7 @@ Where, C= C identifies this as a counter file.<br>
 Where, C= C identifies this as a counter file.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5= This represents the counter file 5.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :14= The colon is called the file separator. The colon separates the file, file 5, from the specific counter, in this case , counter 14 in counter file 5.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . = The point is called the word delimiter. The word delimiter is used to separate the counter number, called the structure, from the sub element. The sub element is ACC for the accumulated value. Similarly, preset value can be accessed as C5:14.PRE.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = The point is called the word delimiter. The word delimiter is used to separate the counter number, called the structure, from the sub element. The sub element is ACC for the accumulated value. Similarly, preset value can be accessed as C5:14.PRE.
 </p>
 </ol>
 
@@ -100,7 +100,7 @@ The above figure shows a high speed counter instruction of a fixed PLC (SLC micr
 </p>
 
 ##### Associated status bits :
-<p style="text-align: justify;">In this instruction, instead of counting the rung transition, the transitions seen at the input point is counted. As a result, many counts may come in between program scans and could be lost, resulting in an inaccurate accumulated value. So in order to solve this problem and provide an accurate update of the accumulated value, a separate hardware accumulator is used in conjunction with the high-speed counter. In word zero, status bit 10, is the update accumulator (UA) bit. Setting the UA bit will cause the instruction image accumulator (in the hardware accumulator used with HSC) to update the processors accumulator.</p><br/>
+<p style="text-align: justify;">In this instruction, instead of counting the rung transition, the transitions seen at the input point is counted. As a result, many counts may come in between program scans and could be lost, resulting in an inaccurate accumulated value. So in order to solve this problem and provide an accurate update of the accumulated value, a separate hardware accumulator is used in conjunction with the high-speed counter. In word zero, status bit 10, is the update accumulator (UA) bit. Setting the UA bit will cause the instruction image accumulator (in the hardware accumulator used with HSC) to update the processors accumulator.</p>
 
 ##### How to reset a counter instruction?
 <p style="text-align: justify;">Reset instruction is used to reset a count-up counter, or count-down counter’s accumulated value to zero. This instruction also works for timers. The address of the reset instruction must match the address of the counter or the timer that is to be reset. Only one address is allowed per reset instruction.<br>
